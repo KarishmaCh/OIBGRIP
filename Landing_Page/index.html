@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img class="logo" src="images/logo.png" alt="Logo"/></a>
+            <!-- navigation -->
+            <div class="toggleMenu" onclick="menuToggle()"></div>
+            <ul class="navigation">
+                <li ><a href="#">Model S</a></li>
+                <li ><a href="#model 3">Model 3 </a></li>
+                <li><a href="#">Model X</a></li>
+
+                <li><a href="#">Model Y</a></li>
+                <li><a href="#footer">Contact</a></li>
+		
+            </ul>
+        </header>
+        <div class="content" >
+            <div class="textBox">
+                <h2>Model S<br></h2>
+                <p>Travel farther on a single charge than any other electric vehicle—and keep going with access to 30,000+ Superchargers globally. By combining up to 405 miles of estimated range with Tesla fast charging technology, you’ll spend less time charging and even more time on the road.</p>
+                <a href="#">Order Now</a>
+            </div>
+            <div class="imgBox">
+                <img class="tesla" src="images/blue.png" alt="Tesla">
+            </div>
+        </div>
+
+        <ul class="thumb">
+        <!-- Change page decoration like background color and img. for change called onclick function -->
+            <li><img onclick="imgSlider('images/blue.png');changeBgColor('#0062be')" src="images/blue.png" alt=""></li>
+
+            <li><img onclick="imgSlider('images/red.png');changeBgColor('#e60c2c')" src="images/red.png" alt=""></li>
+
+            <li><img onclick="imgSlider('images/black.png');changeBgColor('#1e1e1e')" src="images/black.png" alt=""></li>
+
+        </ul>
+        <ul class="social">
+            <!-- Social Media Icon -->
+            <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="images/instagram.png" alt=""></a></li>
+        </ul>
+
+
+    </section>
+
+<!-- javascript Section -->
+<script type="text/javascript">
+// Function For Change tesla Img when click on thumb img
+    function imgSlider(anything){
+        document.querySelector('.tesla').src =anything;
+    }
+// Function For Change Background Color
+    function changeBgColor(color) {
+        const sec = document.querySelector('.sec');
+        sec.style.background = color;
+    }
+// Function for Toggling Navigation
+    function menuToggle() {
+        const toggleMenu = document.querySelector('.toggleMenu');
+        const navigation = document.querySelector('.navigation');
+        toggleMenu.classList.toggle('active');
+        navigation.classList.toggle('active');
+    }
+  
+</script>
+<!-- Footer -->
+
+<div id="footer">
+<footer class="footer-distributed">
+			<div class="footer-left">
+          <img src="images/logo2.png">
+				<p class="footer-company-name">© 2022 landing page task 1 </p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span> Tesla Headquarters · 3500 Deer Creek Road. Palo Alto ; <br>Tesla Factory · 45500 Fremont Boulevard. Fremont ; <br>Tesla Gigafactory · Electric Avenue.</span>
+						</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>Area code:512</p>
+
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@tesla.com">support@tesla.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Tesla, Inc. is an American electric vehicle and clean energy company based in Austin, Texas, United States. Tesla designs and manufactures electric cars, battery energy storage from home to grid-scale, solar panels and solar roof tiles, and related products and services.</p>
+				<div class="footer-icons">
+			
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+</div>
+		</footer>
+	</body>
+
+
+</html>
+
+
